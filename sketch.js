@@ -4,6 +4,7 @@ function setup() {
 
 function draw() {
   background(220);
-  fill(255, 0,0);
+  fill(255, 255,0);
+  noStroke();
   rectangle(20, 20, 100,100);
 }
