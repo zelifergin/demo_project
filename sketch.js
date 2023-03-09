@@ -7,4 +7,5 @@ function draw() {
   fill(255, 255,0);
   noStroke();
   rectangle(20, 20, 100,100);
+  rectangle(40,40, 150,150);
 }
