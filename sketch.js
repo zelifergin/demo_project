@@ -13,6 +13,9 @@ function draw() {
   stroke(255);
 
   let amplitude = width / 4;
+  let colors1 = map(noise(t + 10), 0, 1, 0, 50)
+  let colors2 = map(noise(t + 20), 0, 1, 50, 150)
+  let colors3 = map(noise(t + 100), 0, 1, 50, 150)
 
   for (let i = 0; i < numLines; i++) {
     let x1 = sin((t + i) / 10) * amplitude;
@@ -24,12 +27,10 @@ function draw() {
     line(x1, y1, x2, y2);
     
     if (x1 > width / 2) {
-  stroke(map(noise(t + 10), 0, 1, 0, 50), map(noise(t + 10), 0, 1, 0, 50), map(noise(t + 10), 0, 1, 0, 50));
+  stroke(colors1, colors1, colors1);
 } else {
-  stroke(map(noise(t + 20), 0, 1, 50, 150), map(noise(t + 100), 0, 1, 50, 150),map(noise(t + 20), 0, 1, 50, 150));
-}
-    
-    
+  stroke(colors2,colors3,colors2);
+}  
   }
 
   t += 0.1;
